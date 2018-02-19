@@ -1,0 +1,97 @@
+body {
+    background-color: #2e3e44;
+    position: relative;
+}
+
+.divhader {
+    width: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    font-family: "Times New Roman";
+    width: auto;
+    text-align: right;
+    padding-right: 150px;
+    vertical-align: top;
+    padding-top: 100px;
+    display: block;
+
+}
+
+.proffesor {
+
+    width: 460px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+}
+
+.book {
+
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 310px;
+    right: 0;
+
+}
+
+.button {
+
+    width: auto;
+    height: auto;
+    background: #f16731;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 330px;
+    right: 410px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .3s all ease-in-out; /*отвечает за плавность появления*/
+}
+
+.button:hover {
+    background: #f74804;
+}
+
+.button:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    /*отвечает за тень вокруг кнопки*/
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 22px 0px rgba(255,255,255,1);
+}
+
+.book:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+
