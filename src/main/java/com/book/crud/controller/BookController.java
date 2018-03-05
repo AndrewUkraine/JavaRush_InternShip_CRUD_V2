@@ -22,7 +22,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @RequestMapping(value = "books",  method = RequestMethod.GET)
+    @RequestMapping(value = "books",   method = RequestMethod.GET)
     public String listBooks(@RequestParam(required = false) Integer page, Model model) {
         model.addAttribute("book", new Book());
         List<Book> books = this.bookService.listBooks();
@@ -32,6 +32,7 @@ public class BookController {
     }
 
     @RequestMapping(value = "/books/add", method = RequestMethod.POST)
+
     public String addBook(@ModelAttribute("book") Book book){
         if(book.getId() == 0){
             this.bookService.addBook(book);
